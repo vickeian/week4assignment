@@ -35,7 +35,7 @@ Q5Data <- TidyData %>%
   group_by(subject, activity) %>%
   summarise_all(funs(mean))
 
-write.table(q5Data, "q5Data.txt", row.name=FALSE)
+write.table(Q5Data, "Q5Data.txt", row.name=FALSE)
 
 View(TidyData)
 View(Q5Data)
