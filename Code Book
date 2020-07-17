@@ -1,6 +1,6 @@
 Code Book
 
-The "UCI HAR Dataset" contains data on wearable gadget users' activity. It can be downloaded with the link given in the coursework page. 
+The "UCI HAR Dataset" contains data on volunteers' physical activity recorded through wearing a smartphone on their wrists. It can be downloaded with the link given in the coursework page. 
 
 After downloading the file, extract it and the following files are read into tables using the "read.table()" function:
 
