@@ -32,8 +32,7 @@ We replace the "code" column in "TidyData" with the corresponding activity provi
 
 4. Renaming the data set with descriptive names
 
-We replace all "Acc" from the column's name into "Accelerometer", "Gyro" into "Gyroscope", "BodyBody" into "Body", "Mag" into "Magnitude".
-
+We replace all "Acc" from the column's name into "Accelerometer", "Gyro" into "Gyroscope", "BodyBody" into "Body", "Mag" into "Magnitude". 
 Also, the "code" column is renamed as "activities" while colums that start with character "f" is replaced by "Frequency" and columns that start with character "t" is replaced with "Time".
 
 5. Creating another data from No.4 containing only the average of each variable for each activity and subject.
