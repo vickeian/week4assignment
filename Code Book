@@ -1,0 +1,41 @@
+Code Book
+
+The "UCI HAR Dataset" contains data on wearable gadget users' activity. It can be downloaded with the link given in the coursework page. 
+
+After downloading the file, extract it and the following files are read into tables using the "read.table()" function:
+
+feature.txt
+activity_labels.txt
+subject_test.txt
+x_test.txt
+y_test_txt
+subject_train.txt
+X_train.txt
+y_train.txt
+
+Afterwards, the "run_analysis.R" code is used to tidy the data:
+
+1. Merging the training and test data sets
+
+"x" is created using the rbind() function to merge x_train and x_test data.
+"y" is created using the rbind() function to merge y_train and y_test data.
+"Subject" is created using the rbind() function to merge subject_train and subject_test data.
+"MergedData" is created the cbind() function to merge all three preceding data mentioned above.
+
+2. Extracting only the mean and standard deviation for each measurement.
+
+"TidyData" is created through subsetting "MergedData". We use the "select()" function to subset subject, code as well as the mean and standard deviation measurements for each of the measurement provided.
+
+3. Naming activities code with descriptive names
+
+We replace the "code" column in "TidyData" with the corresponding activity provided in the "activities" variable.
+
+4. Renaming the data set with descriptive names
+
+We replace all "Acc" from the column's name into "Accelerometer", "Gyro" into "Gyroscope", "BodyBody" into "Body", "Mag" into "Magnitude".
+
+Also, the "code" column is renamed as "activities" while colums that start with character "f" is replaced by "Frequency" and columns that start with character "t" is replaced with "Time".
+
+5. Creating another data from No.4 containing only the average of each variable for each activity and subject.
+
+"Q5Data" is created by summarizing "TidyData" and taking the means of each variable for each activity and subject. "Q5Data" is saved as a txt file with name "Q5Data.txt".
